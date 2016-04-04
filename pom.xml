@@ -36,7 +36,7 @@
   <artifactId>jomc-pom</artifactId>
   <packaging>pom</packaging>
   <name>JOMC ⁑ POM</name>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.2-SNAPSHOT</version>
   <description>JOMC parent POM.</description>
   <url>${jomc.base.url}/${jomc.site.location}</url>
   <inceptionYear>2005</inceptionYear>
