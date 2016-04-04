@@ -36,7 +36,7 @@
   <artifactId>jomc-pom</artifactId>
   <packaging>pom</packaging>
   <name>JOMC ⁑ POM</name>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <description>JOMC parent POM.</description>
   <url>${jomc.base.url}/${jomc.site.location}</url>
   <inceptionYear>2005</inceptionYear>
@@ -69,9 +69,9 @@
     <url>https://travis-ci.org/JOMC</url>
   </ciManagement>
   <scm>
-    <connection>${jomc.scm.connection}</connection>
-    <developerConnection>${jomc.scm.developerConnection}</developerConnection>
-    <url>${jomc.scm.url}</url>
+    <connection>${jomc.scm.connection}/tags/jomc-pom-1.1</connection>
+    <developerConnection>${jomc.scm.developerConnection}/tags/jomc-pom-1.1</developerConnection>
+    <url>${jomc.scm.url}/tags/jomc-pom-1.1</url>
   </scm>
   <build>
     <extensions>
@@ -1397,7 +1397,7 @@
     <jomc.animal-sniffer.signature.artifactId>jdk15-jaxb21-signature</jomc.animal-sniffer.signature.artifactId>
     <jomc.animal-sniffer.signature.version>${jomc.build.version}</jomc.animal-sniffer.signature.version>
     <!-- Properties to override. -->
-    <jomc.scm.location>jomc-pom/trunk</jomc.scm.location>
+    <jomc.scm.location>${project.artifactId}</jomc.scm.location>
     <jomc.site.location>${project.artifactId}/${project.version}</jomc.site.location>
     <jomc.trac.query>order=id&amp;version=${project.version}&amp;component=${project.name}</jomc.trac.query>
   </properties>
