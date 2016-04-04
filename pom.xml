@@ -69,9 +69,9 @@
     <url>https://travis-ci.org/JOMC</url>
   </ciManagement>
   <scm>
-    <connection>${jomc.scm.connection}</connection>
-    <developerConnection>${jomc.scm.developerConnection}</developerConnection>
-    <url>${jomc.scm.url}</url>
+    <connection>${jomc.scm.connection}/trunk</connection>
+    <developerConnection>${jomc.scm.developerConnection}/trunk</developerConnection>
+    <url>${jomc.scm.url}/trunk</url>
   </scm>
   <build>
     <extensions>
@@ -1397,7 +1397,7 @@
     <jomc.animal-sniffer.signature.artifactId>jdk15-jaxb21-signature</jomc.animal-sniffer.signature.artifactId>
     <jomc.animal-sniffer.signature.version>${jomc.build.version}</jomc.animal-sniffer.signature.version>
     <!-- Properties to override. -->
-    <jomc.scm.location>jomc-pom/trunk</jomc.scm.location>
+    <jomc.scm.location>${project.artifactId}</jomc.scm.location>
     <jomc.site.location>${project.artifactId}/${project.version}</jomc.site.location>
     <jomc.trac.query>order=id&amp;version=${project.version}&amp;component=${project.name}</jomc.trac.query>
   </properties>
