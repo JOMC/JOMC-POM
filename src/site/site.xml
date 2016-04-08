@@ -68,6 +68,7 @@ ga('send', 'pageview');
     <menu name="Projects" inherit="bottom">
       <item name="JOMC" href="http://www.jomc.org/jomc/current/index.html"/>
       <item name="JLS" href="http://www.jomc.org/jomc-jls/current/index.html"/>
+      <item name="Model" href="http://www.jomc.org/jomc-model/current/index.html"/>
       <item name="Modlet" href="http://www.jomc.org/jomc-modlet/current/index.html"/>
       <item name="Utilities" href="http://www.jomc.org/jomc-util/current/index.html"/>
     </menu>
