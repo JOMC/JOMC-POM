@@ -36,7 +36,7 @@
   <skin>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-fluido-skin</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
   </skin>
   <bannerLeft>
     <name>JOMC</name>
@@ -66,11 +66,13 @@ ga('send', 'pageview');
     </head>
     <menu ref="reports" inherit="bottom"/>
     <menu name="Projects" inherit="bottom">
-      <item name="JOMC" href="http://www.jomc.org/jomc/current/index.html"/>
+      <item name="JOMC API" href="http://www.jomc.org/jomc/current/index.html"/>
       <item name="JLS" href="http://www.jomc.org/jomc-jls/current/index.html"/>
       <item name="Model" href="http://www.jomc.org/jomc-model/current/index.html"/>
       <item name="Modlet" href="http://www.jomc.org/jomc-modlet/current/index.html"/>
       <item name="Utilities" href="http://www.jomc.org/jomc-util/current/index.html"/>
+      <item name="JOMC RI" href="http://www.jomc.org/jomc-ri/current/index.html"/>
+      <item name="Tools" href="http://www.jomc.org/jomc-tools/current/index.html"/>
     </menu>
   </body>
 </project>
