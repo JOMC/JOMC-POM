@@ -30,9 +30,9 @@
   $JOMC$
 
 -->
-<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
+<project xmlns="http://maven.apache.org/DECORATION/1.7.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd">
   <skin>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-fluido-skin</artifactId>
@@ -44,7 +44,10 @@
     <href>http://www.jomc.org</href>
   </bannerLeft>
   <poweredBy>
-    <logo name="Christian Schulte" href="http://www.schulte.it" img="http://www.schulte.it/resources/schulte.it.png"/>
+    <logo name="Christian Schulte"
+          href="http://www.schulte.it"
+          img="http://www.schulte.it/resources/schulte.it.png">
+    </logo>
   </poweredBy>
   <googleAdSenseClient>ca-pub-2363332114228707</googleAdSenseClient>
   <googleAdSenseSlot>0169973943</googleAdSenseSlot>
@@ -66,12 +69,12 @@ ga('send', 'pageview');
     </head>
     <menu ref="reports" inherit="bottom"/>
     <menu name="Projects" inherit="bottom">
-      <item name="JOMC API" href="http://www.jomc.org/jomc/current/index.html"/>
+      <item name="API" href="http://www.jomc.org/jomc/current/index.html"/>
+      <item name="RI" href="http://www.jomc.org/jomc-ri/current/index.html"/>
       <item name="JLS" href="http://www.jomc.org/jomc-jls/current/index.html"/>
       <item name="Model" href="http://www.jomc.org/jomc-model/current/index.html"/>
       <item name="Modlet" href="http://www.jomc.org/jomc-modlet/current/index.html"/>
       <item name="Utilities" href="http://www.jomc.org/jomc-util/current/index.html"/>
-      <item name="JOMC RI" href="http://www.jomc.org/jomc-ri/current/index.html"/>
       <item name="Tools" href="http://www.jomc.org/jomc-tools/current/index.html"/>
     </menu>
   </body>
