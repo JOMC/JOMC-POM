@@ -36,7 +36,7 @@
   <artifactId>jomc-pom</artifactId>
   <packaging>pom</packaging>
   <name>JOMC ⁑ POM</name>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.4</version>
   <description>JOMC parent POM.</description>
   <url>${jomc.base.url}/${jomc.site.location}</url>
   <inceptionYear>2005</inceptionYear>
@@ -69,9 +69,9 @@
     <url>https://travis-ci.org/JOMC</url>
   </ciManagement>
   <scm>
-    <connection>${jomc.scm.connection}/trunk</connection>
-    <developerConnection>${jomc.scm.developerConnection}/trunk</developerConnection>
-    <url>${jomc.scm.url}/trunk</url>
+    <connection>${jomc.scm.connection}/tags/jomc-pom-1.4</connection>
+    <developerConnection>${jomc.scm.developerConnection}/tags/jomc-pom-1.4</developerConnection>
+    <url>${jomc.scm.url}/tags/jomc-pom-1.4</url>
   </scm>
   <build>
     <extensions>
@@ -968,6 +968,45 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.jvnet.jaxb2.maven2</groupId>
+          <artifactId>maven-jaxb22-plugin</artifactId>
+          <version>${maven-jaxb22-plugin.artifact.version}</version>
+          <executions>
+            <execution>
+              <id>default-generate</id>
+              <goals>
+                <goal>generate</goal>
+              </goals>
+              <configuration>
+                <args>
+                  <arg>-npa</arg>
+                  <arg>-copy-constructor</arg>
+                  <arg>-mark-generated</arg>
+                  <arg>-Xinject-code</arg>
+                  <arg>-Xinheritance</arg>
+                </args>
+                <bindingDirectory>src/main/schemas</bindingDirectory>
+                <extension>true</extension>
+                <generateDirectory>${xjcOutputDirectory}</generateDirectory>
+                <readOnly>true</readOnly>
+                <schemaDirectory>src/main/schemas</schemaDirectory>
+                <plugins>
+                  <plugin>
+                    <groupId>org.jvnet.jaxb2_commons</groupId>
+                    <artifactId>jaxb2-basics</artifactId>
+                    <version>${jaxb2-basics.version}</version>
+                  </plugin>
+                  <plugin>
+                    <groupId>net.sourceforge.ccxjc</groupId>
+                    <artifactId>cc-xjc-plugin</artifactId>
+                    <version>${cc-xjc-plugin.version}</version>
+                  </plugin>
+                </plugins>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -1301,7 +1340,7 @@
     https://issues.apache.org/jira/browse/MPLUGIN-296
     -->
     <plugintools.version>3.4</plugintools.version>
-    <plexuscontainers.version>1.6</plexuscontainers.version>
+    <plexuscontainers.version>1.7</plexuscontainers.version>
     <umlgraph.version>5.6.6</umlgraph.version>
     <cc-xjc-plugin.version>2.0.1</cc-xjc-plugin.version>
     <jaxb2-basics.version>0.11.0</jaxb2-basics.version>
@@ -1309,19 +1348,19 @@
     <!-- Plugin versions. -->
     <maven-compiler-plugin.artifact.version>3.5.1</maven-compiler-plugin.artifact.version>
     <maven-site-plugin.artifact.version>3.5.1</maven-site-plugin.artifact.version>
-    <maven-resources-plugin.artifact.version>2.7</maven-resources-plugin.artifact.version>
+    <maven-resources-plugin.artifact.version>3.0.1</maven-resources-plugin.artifact.version>
     <maven-release-plugin.artifact.version>2.5.3</maven-release-plugin.artifact.version>
-    <maven-jar-plugin.artifact.version>2.6</maven-jar-plugin.artifact.version>
+    <maven-jar-plugin.artifact.version>3.0.2</maven-jar-plugin.artifact.version>
     <maven-gpg-plugin.artifact.version>1.6</maven-gpg-plugin.artifact.version>
     <maven-jarsigner-plugin.artifact.version>1.4</maven-jarsigner-plugin.artifact.version>
     <maven-remote-resources-plugin.artifact.version>1.5</maven-remote-resources-plugin.artifact.version>
-    <maven-javadoc-plugin.artifact.version>2.10.3</maven-javadoc-plugin.artifact.version>
+    <maven-javadoc-plugin.artifact.version>2.10.4</maven-javadoc-plugin.artifact.version>
     <maven-clean-plugin.artifact.version>3.0.0</maven-clean-plugin.artifact.version>
     <maven-deploy-plugin.artifact.version>2.8.2</maven-deploy-plugin.artifact.version>
     <maven-dependency-plugin.artifact.version>2.10</maven-dependency-plugin.artifact.version>
     <maven-install-plugin.artifact.version>2.5.2</maven-install-plugin.artifact.version>
-    <maven-source-plugin.artifact.version>3.0.0</maven-source-plugin.artifact.version>
-    <maven-scm-plugin.artifact.version>1.9.4</maven-scm-plugin.artifact.version>
+    <maven-source-plugin.artifact.version>3.0.1</maven-source-plugin.artifact.version>
+    <maven-scm-plugin.artifact.version>1.9.5</maven-scm-plugin.artifact.version>
     <maven-changes-plugin.artifact.version>2.12</maven-changes-plugin.artifact.version>
     <maven-enforcer-plugin.artifact.version>1.4.1</maven-enforcer-plugin.artifact.version>
     <!--
@@ -1338,16 +1377,17 @@
     <maven-checkstyle-plugin.artifact.version>2.17</maven-checkstyle-plugin.artifact.version>
     <wagon-maven-plugin.artifact.version>1.0</wagon-maven-plugin.artifact.version>
     <javacc-maven-plugin.artifact.version>2.6</javacc-maven-plugin.artifact.version>
-    <build-helper-maven-plugin.artifact.version>1.10</build-helper-maven-plugin.artifact.version>
+    <build-helper-maven-plugin.artifact.version>1.12</build-helper-maven-plugin.artifact.version>
     <xml-maven-plugin.artifact.version>1.0.1</xml-maven-plugin.artifact.version>
     <clirr-maven-plugin.artifact.version>2.7</clirr-maven-plugin.artifact.version>
-    <findbugs-maven-plugin.artifact.version>3.0.3</findbugs-maven-plugin.artifact.version>
-    <jacoco-maven-plugin.artifact.version>0.7.6.201602180812</jacoco-maven-plugin.artifact.version>
+    <findbugs-maven-plugin.artifact.version>3.0.4</findbugs-maven-plugin.artifact.version>
+    <jacoco-maven-plugin.artifact.version>0.7.7.201606060606</jacoco-maven-plugin.artifact.version>
     <!--
     https://issues.apache.org/jira/browse/MTAGLIST-59
     -->
     <taglist-maven-plugin.artifact.version>2.4</taglist-maven-plugin.artifact.version>
     <maven-jaxb21-plugin.artifact.version>0.13.1</maven-jaxb21-plugin.artifact.version>
+    <maven-jaxb22-plugin.artifact.version>0.13.1</maven-jaxb22-plugin.artifact.version>
     <maven-shade-plugin.artifact.version>2.4.3</maven-shade-plugin.artifact.version>
     <maven-assembly-plugin.artifact.version>2.6</maven-assembly-plugin.artifact.version>
     <!-- Plugin parameters. -->
@@ -1371,7 +1411,8 @@
     <maven.javadoc.memory>32m</maven.javadoc.memory>
     <maven.javadoc.minmemory>${maven.javadoc.memory}</maven.javadoc.minmemory>
     <maven.javadoc.maxmemory>${maven.javadoc.memory}</maven.javadoc.maxmemory>
-    <maven.surefire.argLine>-client -Xms32m -Xmx32m -Xss2m -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
+    <maven.surefire.memory>32m</maven.surefire.memory>
+    <maven.surefire.argLine>-client -Xms${maven.surefire.memory} -Xmx${maven.surefire.memory} -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
     <!-- Updated by JaCoCo plugin. Potentionally conflicts with other plugins using that same property. -->
     <argLine>${maven.surefire.argLine}</argLine>
     <!-- Parent -->
