@@ -1339,8 +1339,8 @@
     https://issues.apache.org/jira/browse/MNG-3762
     https://issues.apache.org/jira/browse/MPLUGIN-296
     -->
-    <plugintools.version>3.4</plugintools.version>
-    <plexuscontainers.version>1.7</plexuscontainers.version>
+    <plugintools.version>3.5</plugintools.version>
+    <plexuscontainers.version>1.7.1</plexuscontainers.version>
     <umlgraph.version>5.6.6</umlgraph.version>
     <cc-xjc-plugin.version>2.0.1</cc-xjc-plugin.version>
     <jaxb2-basics.version>0.11.0</jaxb2-basics.version>
