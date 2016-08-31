@@ -36,7 +36,7 @@
   <artifactId>jomc-pom</artifactId>
   <packaging>pom</packaging>
   <name>JOMC ⁑ POM</name>
-  <version>1.5-SNAPSHOT</version>
+  <version>1.5</version>
   <description>JOMC parent POM.</description>
   <url>${jomc.base.url}/${jomc.site.location}</url>
   <inceptionYear>2005</inceptionYear>
@@ -69,9 +69,9 @@
     <url>https://travis-ci.org/JOMC</url>
   </ciManagement>
   <scm>
-    <connection>${jomc.scm.connection}/trunk</connection>
-    <developerConnection>${jomc.scm.developerConnection}/trunk</developerConnection>
-    <url>${jomc.scm.url}/trunk</url>
+    <connection>${jomc.scm.connection}/tags/jomc-pom-1.5</connection>
+    <developerConnection>${jomc.scm.developerConnection}/tags/jomc-pom-1.5</developerConnection>
+    <url>${jomc.scm.url}/tags/jomc-pom-1.5</url>
   </scm>
   <build>
     <extensions>
