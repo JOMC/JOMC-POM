@@ -572,6 +572,7 @@
               <!-- Test properties. -->
               <jomc.test.resourceEncoding>${project.build.sourceEncoding}</jomc.test.resourceEncoding>
               <jomc.test.outputDirectory>${project.build.directory}</jomc.test.outputDirectory>
+              <jomc.test.projectName>${project.name}</jomc.test.projectName>
             </systemPropertyVariables>
           </configuration>
         </plugin>
