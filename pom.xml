@@ -249,7 +249,6 @@
                     </tagletArtifact>
                   </tagletArtifacts>
                   <additionalJOptions>
-                    <additionalJOption>-J-client</additionalJOption>
                     <additionalJOption>-J-Dfile.encoding=${file.encoding}</additionalJOption>
                   </additionalJOptions>
                   <additionalparam>-inferrel -inferdep -hide java.* -collpackages java.util.* -qualify -postfixpackage -nodefontsize 10 -nodefontpackagesize 8 -outputencoding ${project.reporting.outputEncoding} -inferdepvis protected</additionalparam>
@@ -505,7 +504,6 @@
             </excludeClassifiers>
             <maxMemory>${maven.jarsigner.memory}</maxMemory>
             <arguments>
-              <argument>-J-client</argument>
               <argument>-J-Dfile.encoding=${file.encoding}</argument>
               <argument>-J-Djsse.enableSNIExtension=false</argument>
               <argument>-digestalg</argument>
@@ -611,7 +609,6 @@
               </tagletArtifact>
             </tagletArtifacts>
             <additionalJOptions>
-              <additionalJOption>-J-client</additionalJOption>
               <additionalJOption>-J-Dfile.encoding=${file.encoding}</additionalJOption>
             </additionalJOptions>
             <additionalparam>-inferrel -inferdep -hide java.* -collpackages java.util.* -qualify -postfixpackage -nodefontsize 10 -nodefontpackagesize 8 -outputencoding ${project.reporting.outputEncoding} -inferdepvis protected</additionalparam>
@@ -1350,6 +1347,7 @@
     <cc-xjc-plugin.version>2.0.1</cc-xjc-plugin.version>
     <jaxb2-basics.version>0.11.0</jaxb2-basics.version>
     <jomc.build.version>1.10</jomc.build.version>
+    <wagon.version>2.12</wagon.version>
     <!-- Plugin versions. -->
     <maven-compiler-plugin.artifact.version>3.5.1</maven-compiler-plugin.artifact.version>
     <maven-site-plugin.artifact.version>3.5.1</maven-site-plugin.artifact.version>
@@ -1417,7 +1415,7 @@
     <maven.javadoc.minmemory>${maven.javadoc.memory}</maven.javadoc.minmemory>
     <maven.javadoc.maxmemory>${maven.javadoc.memory}</maven.javadoc.maxmemory>
     <maven.surefire.memory>32m</maven.surefire.memory>
-    <maven.surefire.argLine>-client -Xms${maven.surefire.memory} -Xmx${maven.surefire.memory} -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
+    <maven.surefire.argLine>-Xms${maven.surefire.memory} -Xmx${maven.surefire.memory} -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
     <!-- Updated by JaCoCo plugin. Potentionally conflicts with other plugins using that same property. -->
     <argLine>${maven.surefire.argLine}</argLine>
     <!-- Parent -->
