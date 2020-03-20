@@ -256,7 +256,6 @@
                   </tagletArtifacts>
                   -->
                   <additionalJOptions>
-                    <additionalJOption>-J-client</additionalJOption>
                     <additionalJOption>-J-Dfile.encoding=${file.encoding}</additionalJOption>
                   </additionalJOptions>
                   <!--
@@ -514,7 +513,6 @@
             </excludeClassifiers>
             <maxMemory>${maven.jarsigner.memory}</maxMemory>
             <arguments>
-              <argument>-J-client</argument>
               <argument>-J-Dfile.encoding=${file.encoding}</argument>
               <argument>-J-Djsse.enableSNIExtension=false</argument>
               <argument>-digestalg</argument>
@@ -626,7 +624,6 @@
             </tagletArtifacts>
             -->
             <additionalJOptions>
-              <additionalJOption>-J-client</additionalJOption>
               <additionalJOption>-J-Dfile.encoding=${file.encoding}</additionalJOption>
             </additionalJOptions>
             <!--
@@ -1450,7 +1447,7 @@
     <maven.javadoc.minmemory>${maven.javadoc.memory}</maven.javadoc.minmemory>
     <maven.javadoc.maxmemory>${maven.javadoc.memory}</maven.javadoc.maxmemory>
     <maven.surefire.memory>32m</maven.surefire.memory>
-    <maven.surefire.argLine>-client -Xms${maven.surefire.memory} -Xmx${maven.surefire.memory} -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
+    <maven.surefire.argLine>-Xms${maven.surefire.memory} -Xmx${maven.surefire.memory} -Dfile.encoding=${file.encoding}</maven.surefire.argLine>
     <!-- Updated by JaCoCo plugin. Potentionally conflicts with other plugins using that same property. -->
     <argLine>${maven.surefire.argLine}</argLine>
     <!-- Parent -->
